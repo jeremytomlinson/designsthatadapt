@@ -81,9 +81,3 @@ jobs:
           source_branch: ${{ steps.sync.outputs.new_branch }}
           destination_branch: ${{ github.event.client_payload.data.branch }}
 
- # publish github artifacts
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: jeremytomlinson-designsthatadapt
-          path: ./
